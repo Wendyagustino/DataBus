@@ -31,7 +31,7 @@
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -42,19 +42,19 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="/adib">
+                            <a class="nav-link" href="/anggota/adib">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Adib
                             </a>
-                            <a class="nav-link" href="/rizki">
+                            <a class="nav-link" href="/anggota/rizki">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Rizki
                             </a>
-                            <a class="nav-link" href="/wendy">
+                            <a class="nav-link" href="/anggota/wendy">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Wendy
                             </a>
-                            <a class="nav-link" href="/zahwa">
+                            <a class="nav-link" href="/anggota/zahwa">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Zahwa
                             </a>

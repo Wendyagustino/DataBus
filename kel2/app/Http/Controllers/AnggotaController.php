@@ -43,7 +43,7 @@ class AnggotaController extends Controller
         $anggota->save();
 
         // Redirect ke halaman anggota dengan pesan sukses
-        return redirect()->route('anggota.index')->with('success', 'Anggota berhasil ditambahkan!');
+        return redirect()->route('layout.app')->with('success', 'Anggota berhasil ditambahkan!');
     }
 
     /**

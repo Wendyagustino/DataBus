@@ -9,6 +9,6 @@ class anggota extends Model
 {
     /** @use HasFactory<\Database\Factories\AnggotaFactory> */
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = ['nama', 'kelas', 'nim', 'jenis_kelamin'];
 
 }

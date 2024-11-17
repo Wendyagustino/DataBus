@@ -13,7 +13,7 @@
             Form Tambah Anggota
         </div>
         <div class="card-body">
-            <form action="/anggota" method="POST">
+            <form action="{{ route('anggota.store') }}" method="POST">
                 @csrf <!-- Token CSRF untuk keamanan -->
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
