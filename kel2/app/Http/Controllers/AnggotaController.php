@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\anggota;
 use App\Http\Requests\StoreanggotaRequest;
 use App\Http\Requests\UpdateanggotaRequest;
+use Illuminate\Support\Facades\Storage;
 
 class AnggotaController extends Controller
 {
@@ -41,7 +42,7 @@ class AnggotaController extends Controller
         // Simpan data ke database
         $anggota = new \App\Models\anggota();
         $anggota->fill($requestData);
-        $anggota->foto= $request->file('foto')->store('public');
+        $anggota->foto= $request->file('foto')->store('images', 'public');
         $anggota->save();
 
         // Redirect ke halaman anggota dengan pesan sukses

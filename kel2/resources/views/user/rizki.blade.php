@@ -10,7 +10,7 @@
                 </div>
                 <div class="card-body">
                     <div class="text-center mb-3">
-                        <img src="{{ asset('storage/' . $anggota->foto)}} alt="Foto {{ $anggota->nama }}" class="rounded-circle img-thumbnail" width="150">
+                    <img src="{{ asset('storage/'.$anggota->foto) }}" alt="Foto {{ $anggota->nama }}" class="rounded-circle img-thumbnail" width="300">
                     </div>
                     <h4 class="text-center">Nama: <strong>{{ $anggota->nama }}</strong></h4>
                     <p class="text-center text-muted">Kelas: {{ $anggota->kelas }}</p>
