@@ -1,3 +1,5 @@
-<div>
-    <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
-</div>
+@extends('layout.app')
+@section('content')
+
+<h1>Halo</h1>
+@endsection
