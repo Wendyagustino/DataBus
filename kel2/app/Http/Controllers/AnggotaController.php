@@ -55,7 +55,7 @@ class AnggotaController extends Controller
     {
         // Daftar nama view yang tersedia
         $validViews = ['adib', 'rizki', 'zahwa', 'wendy'];
-        $anggota = anggota::find($name);
+        $anggota = anggota::where('nama', $name)->first();;
         // Periksa apakah nama view valid
         if (in_array($name, $validViews)) {
             // Arahkan ke view yang sesuai
