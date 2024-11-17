@@ -11,17 +11,19 @@ class AnggotaPolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user): bool
+    public function viewAny(User $user)
     {
-        //
+        return true; 
     }
+
 
     /**
      * Determine whether the user can view the model.
      */
     public function view(User $user, anggota $anggota): bool
     {
-        //
+        return true; 
+
     }
 
     /**
@@ -29,7 +31,7 @@ class AnggotaPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return true; 
     }
 
     /**
@@ -37,7 +39,7 @@ class AnggotaPolicy
      */
     public function update(User $user, anggota $anggota): bool
     {
-        //
+        return true; 
     }
 
     /**
@@ -45,7 +47,7 @@ class AnggotaPolicy
      */
     public function delete(User $user, anggota $anggota): bool
     {
-        //
+        return true; 
     }
 
     /**
@@ -53,7 +55,7 @@ class AnggotaPolicy
      */
     public function restore(User $user, anggota $anggota): bool
     {
-        //
+        return true; 
     }
 
     /**
@@ -61,6 +63,6 @@ class AnggotaPolicy
      */
     public function forceDelete(User $user, anggota $anggota): bool
     {
-        //
+        return true; 
     }
 }

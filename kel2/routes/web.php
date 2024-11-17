@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AnggotaController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Middleware\Authenticate;
 
 Route::get('/', function () {
     return view('layout.app');
@@ -17,3 +20,10 @@ Route::get('/wendy', function () {
 Route::get('/zahwa', function () {
     return view('user.zahwa');
 });
+
+Auth::routes();
+Route::middleware([Authenticate::class])->group(function () {
+    Route::resource('anggota', AnggotaController::class);
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

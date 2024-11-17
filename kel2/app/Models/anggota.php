@@ -9,4 +9,6 @@ class anggota extends Model
 {
     /** @use HasFactory<\Database\Factories\AnggotaFactory> */
     use HasFactory;
+    protected $guarded = [];
+
 }
