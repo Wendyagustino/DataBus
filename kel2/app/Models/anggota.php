@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class anggota extends Model
 {
-    /** @use HasFactory<\Database\Factories\AnggotaFactory> */
     use HasFactory;
-    protected $fillable = ['nama', 'kelas', 'nim', 'jenis_kelamin'];
 
+    protected $fillable = [
+        'nama',
+        'kelas',
+        'nim',
+        'jenis_kelamin',
+        'foto',
+    ];
 }
+

@@ -32,18 +32,20 @@ class AnggotaController extends Controller
        // Validasi input
        $requestData = $request->validate([
             'nama' => 'required|string|max:255',
+            'foto' => 'required|image|mimes:png,jpg,jpeg',
             'kelas' => 'required|string|max:255',
             'nim' => 'required|string|max:255',
             'jenis_kelamin' => 'required|in:laki-laki,perempuan',
         ]);
 
         // Simpan data ke database
-        $anggota = new \app\Models\anggota();
+        $anggota = new \App\Models\anggota();
         $anggota->fill($requestData);
+        $anggota->foto= $request->file('foto')->store('public');
         $anggota->save();
 
         // Redirect ke halaman anggota dengan pesan sukses
-        return redirect()->route('layout.app')->with('success', 'Anggota berhasil ditambahkan!');
+        return back();
     }
 
     /**
@@ -53,11 +55,11 @@ class AnggotaController extends Controller
     {
         // Daftar nama view yang tersedia
         $validViews = ['adib', 'rizki', 'zahwa', 'wendy'];
-
+        $anggota = anggota::find($name);
         // Periksa apakah nama view valid
         if (in_array($name, $validViews)) {
             // Arahkan ke view yang sesuai
-            return view("user.$name");
+            return view("User.$name", compact('anggota'));
         }
 
         // Jika nama view tidak valid, kembalikan halaman error atau redirect
