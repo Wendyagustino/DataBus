@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Static Navigation - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../startbootstrap-sb-admin-master/dist/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -108,7 +108,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-
+                    @yield('content')
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

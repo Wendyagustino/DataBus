@@ -1,3 +1,5 @@
-<div>
-    <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
-</div>
+@extends('layout.app')
+@section('content')
+
+<h1>Halo</h1>
+@endsection
