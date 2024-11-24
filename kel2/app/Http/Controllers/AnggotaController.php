@@ -30,7 +30,6 @@ class AnggotaController extends Controller
      */
     public function store(StoreanggotaRequest $request)
     {
-       // Validasi input
        $requestData = $request->validate([
             'nama' => 'required|string|max:255',
             'foto' => 'required|image|mimes:png,jpg,jpeg',
@@ -38,8 +37,6 @@ class AnggotaController extends Controller
             'nim' => 'required|string|max:255',
             'jenis_kelamin' => 'required|in:laki-laki,perempuan',
         ]);
-
-        // Simpan data ke database
         $anggota = new \App\Models\anggota();
         $anggota->fill($requestData);
         $anggota->foto= $request->file('foto')->store('images', 'public');
@@ -49,9 +46,6 @@ class AnggotaController extends Controller
         return back();
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show($name)
     {
         // Daftar nama view yang tersedia
