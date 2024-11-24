@@ -20,7 +20,6 @@ Route::get('/', function () {
     return view('layout.app');
 });
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/logout', function () {
