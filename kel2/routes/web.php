@@ -15,9 +15,11 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
+Auth::routes();
+
 // Route default
 Route::get('/', function () {
-    return view('layout.app');
+    return view('layouts.app');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

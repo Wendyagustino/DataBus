@@ -14,7 +14,7 @@ class AnggotaController extends Controller
      */
     public function index()
     {
-        return view('layout.app');
+        return view('layouts.test');
     }
 
     /**
