@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Auth;
 // Tambahkan route autentikasi
 Auth::routes();
 // Middleware auth untuk proteksi route anggota
-Route::middleware(['auth'])->group(function () {
-    Route::resource('anggota', AnggotaController::class);
-    Route::get('/anggota/{name}', [AnggotaController::class, 'show']);
-    Route::get('/list_buku', [ListBukuController::class, 'index'])->name('user.list_buku');
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('anggota', AnggotaController::class);
+//     Route::get('/anggota/{name}', [AnggotaController::class, 'show']);
+//     Route::get('/list_buku', [ListBukuController::class, 'index'])->name('user.list_buku');
 
-});
+// });
 
 Auth::routes();
 
@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/logout', function () {
-    Auth::logout();
-    return redirect('login');
-});
+// Route::get('/logout', function () {
+//     Auth::logout();
+//     return redirect('login');
+// });
