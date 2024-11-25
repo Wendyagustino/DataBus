@@ -136,7 +136,7 @@
                             <td style="text-align:center;">
                                 <img src="../startbootstrap-sb-admin-master/dist/assets/img/phone.png" class="phone" alt="">
                                 <h4>No Telepon</h4>
-                                <p>08837853762</p>
+                                <p>088378537</p>
                             </td>
                             <td style="text-align:center;">
                                 <img src="../startbootstrap-sb-admin-master/dist/assets/img/mail.png" class="mail" alt="">
