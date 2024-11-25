@@ -1,34 +1,31 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header text-center bg-primary text-white">
-                    <h3>List Buku</h3>
-                </div>
-                <div class="card-body">
-                    <div class="text-center mb-3">
-                    <img src="{{ asset('storage/'.$listBuku->foto) }}" alt="Foto {{ $listBuku->judul_buku }}" class="rounded-circle img-thumbnail" width="300">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Buku</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Rekomendasi Buku</h1>
+        <div class="row">
+            @foreach ($listBuku as $buku)
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ asset($listBuku->image) }}" class="card-img-top" alt="{{ $listBuku->judul_buku }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $listBuku->judul_buku }}</h5>
+                            <p class="card-text">{{ $listBuku->sipnosis }}</p>
+                            <p class="card-text">Nama Penulis: {{ $listBuku->nama_penulis }}</p>
+                            <p class="card-text">Nama Penerbit: {{ $listBuku->nama_penerbit }}</p>
+                            <p class="card-text">tgl_rilis: {{ $listBuku->tgl_rilis }}</p>
+                            <a href="/list_buku" class="btn btn-primary">Detail</a>
+                        </div>
                     </div>
-                    <h4 class="text-center">Judul Buku: <strong>{{ $listBuku->judul_buku }}</strong></h4>
-                    <p class="text-center text-muted">Sipnosis: {{ $listBuku->sipnosis }}</p>
-                    <p class="text-center text-muted">Nama Penulis: {{ $listBuku->nama_penulis }}</p>
-                    <p class="text-center text-muted">Nama Penerbit: {{ $listBuku->nama_penerbit }}</p>
-                    <p class="text-center text-muted">Tanggal Rilis: {{ $listBuku->tgl_rilis }}</p>
-                    <p class="text-center text-muted">Halaman: {{ $listBuku->halaman }}</p>
-                    <p class="text-center text-muted">Gambar Buku: {{ $listBuku->foto }}</p>
-                    <a href="/list_buku/{{ $item->id }}" class="btn btn-primary">Detail</a>
                 </div>
-                <div class="card-footer text-center">
-                    <a href="{{ url('/') }}" class="btn btn-secondary btn-sm">Kembali ke Beranda</a>
-                </div>
-                <div class="d-flex justify-content-center">
-                    {{ $listBuku->links() }}
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-</div>
-@endsection
+</body>
+</html>

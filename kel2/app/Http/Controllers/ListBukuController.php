@@ -15,7 +15,7 @@ class ListBukuController extends Controller
     public function index()
     {
         $listBuku = ListBuku::latest()->paginate(10);
-        return view('user.list_buku', compact('listBuku'));
+        return view('listBuku.list_buku', compact('listBuku'));
     }
 
     /**
