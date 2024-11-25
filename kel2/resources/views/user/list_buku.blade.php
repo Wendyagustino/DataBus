@@ -19,7 +19,7 @@
                     <p class="text-center text-muted">Tanggal Rilis: {{ $listBuku->tgl_rilis }}</p>
                     <p class="text-center text-muted">Halaman: {{ $listBuku->halaman }}</p>
                     <p class="text-center text-muted">Gambar Buku: {{ $listBuku->foto }}</p>
-                    <a href="#" class="btn btn-primary">Detail</a>
+                    <a href="/list_buku/{{ $item->id }}" class="btn btn-primary">Detail</a>
                 </div>
                 <div class="card-footer text-center">
                     <a href="{{ url('/') }}" class="btn btn-secondary btn-sm">Kembali ke Beranda</a>
