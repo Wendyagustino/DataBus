@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\ListBukuController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,6 +11,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::resource('anggota', AnggotaController::class);
     Route::get('/anggota/{name}', [AnggotaController::class, 'show']);
+    Route::get('/list_buku', [ListBukuController::class, 'index'])->name('user.list_buku');
 
 });
 
@@ -17,7 +19,6 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', function () {
     return view('layout.app');
 });
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
