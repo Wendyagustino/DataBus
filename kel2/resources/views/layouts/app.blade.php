@@ -60,7 +60,7 @@
                 </li>
             </ul>
         </nav>
-
+<p>alo</p>
         <div class="container-fluid">
             <main class="py-4">
                 {{-- @include('flash::message') --}}
